@@ -1,0 +1,55 @@
+/* ============================================
+   Landing Page Styles
+   ============================================ */
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--space-xl) var(--space-xl) var(--space-2xl);
+  background: linear-gradient(180deg, #F7F7FA 0%, #FFFFFF 100%);
+}
+
+/* Pushes content to the bottom */
+.landing__spacer {
+  flex: 1;
+}
+
+/* Bottom content block */
+.landing__content {
+  animation: contentFadeUp 0.6s ease-out 0.2s both;
+}
+
+.landing__title {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.landing__subtitle {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+}
+
+.landing__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Content slide-up animation */
+@keyframes contentFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,87 @@
+/* ============================================
+   Button - Multiple variants
+   ============================================ */
+
+.btn {
+  width: 100%;
+  padding: 15px 24px;
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.01em;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ripple-like hover effect */
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.btn:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Primary - Solid purple */
+.btn--primary {
+  background: linear-gradient(135deg, #6C25FF 0%, #7B3AFF 100%);
+  color: var(--color-white);
+  box-shadow: 0 4px 14px rgba(108, 37, 255, 0.3);
+}
+
+.btn--primary:hover {
+  background: linear-gradient(135deg, #5A1AE0 0%, #6C25FF 100%);
+  box-shadow: 0 6px 20px rgba(108, 37, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(108, 37, 255, 0.3);
+}
+
+/* Secondary - Light purple */
+.btn--secondary {
+  background: linear-gradient(135deg, #C4A0FF 0%, #D4B8FF 100%);
+  color: var(--color-text-primary);
+  box-shadow: 0 2px 8px rgba(196, 160, 255, 0.3);
+}
+
+.btn--secondary:hover {
+  background: linear-gradient(135deg, #B48EFF 0%, #C4A0FF 100%);
+  box-shadow: 0 4px 14px rgba(196, 160, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn--secondary:active {
+  transform: translateY(0);
+}
+
+/* Disabled - Gray */
+.btn--disabled {
+  background: linear-gradient(135deg, #D1D5DB 0%, #C4C7CC 100%);
+  color: var(--color-white);
+  cursor: default;
+  box-shadow: none;
+}
+
+.btn--disabled:hover {
+  transform: none;
+}
+
+.btn--disabled::after {
+  display: none;
+}

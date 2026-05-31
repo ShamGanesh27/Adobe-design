@@ -1,0 +1,53 @@
+/* ============================================
+   Login Page Styles
+   ============================================ */
+
+.login {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--color-bg-phone);
+}
+
+.login__content {
+  padding: var(--space-2xl) var(--space-xl);
+  animation: contentFadeIn 0.5s ease-out;
+}
+
+.login__title {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.login__subtitle {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.login__form .btn {
+  margin-top: var(--space-sm);
+}
+
+/* Page fade-in animation */
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

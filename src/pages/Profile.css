@@ -1,0 +1,124 @@
+/* ============================================
+   Profile / Account Settings Page Styles
+   ============================================ */
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--color-bg-phone);
+  animation: contentFadeIn 0.5s ease-out;
+}
+
+/* Page Title */
+.profile__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  padding: var(--space-xl) var(--space-xl) var(--space-md);
+  letter-spacing: -0.01em;
+}
+
+/* Profile Card */
+.profile__card {
+  margin: 0 var(--space-md);
+  padding: var(--space-lg) var(--space-md);
+  background-color: var(--color-bg-phone);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+}
+
+/* User Info Row - avatar + name/email side by side */
+.profile__user-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+/* ---- Avatar ---- */
+.profile__avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.profile__avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-border-light);
+}
+
+/* Camera icon badge on avatar */
+.profile__camera-icon {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid var(--color-bg-phone);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.profile__camera-icon:hover {
+  transform: scale(1.1);
+  background-color: #5A1AE0;
+}
+
+/* ---- User Details ---- */
+.profile__user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profile__name {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.profile__email {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
+/* ---- Bio Text ---- */
+.profile__bio {
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  line-height: 1.65;
+  margin-bottom: var(--space-xl);
+}
+
+/* Dashed separator line */
+.profile__separator {
+  border-top: 2px dashed var(--color-border);
+}
+
+/* Gray empty area below the card */
+.profile__empty-area {
+  flex: 1;
+  background-color: #F5F5F5;
+  margin-top: var(--space-md);
+}
+
+/* Page fade-in animation */
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

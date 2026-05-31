@@ -1,0 +1,132 @@
+/* ============================================
+   Signup Page Styles
+   ============================================ */
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--color-bg-phone);
+}
+
+.signup__content {
+  padding: var(--space-2xl) var(--space-xl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  animation: contentFadeIn 0.5s ease-out;
+}
+
+.signup__title {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xl);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.signup__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  flex: 1;
+}
+
+/* Spacer to push button to bottom */
+.signup__spacer {
+  flex: 1;
+  min-height: var(--space-lg);
+}
+
+/* ---- Radio Group ---- */
+.signup__radio-group {
+  margin-top: var(--space-xs);
+}
+
+.signup__radio-label {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.signup__required {
+  color: #E53E3E;
+  margin-left: 1px;
+}
+
+.signup__radio-options {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  margin-top: var(--space-sm);
+}
+
+/* Custom radio button */
+.signup__radio {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  user-select: none;
+}
+
+.signup__radio input[type="radio"] {
+  display: none;
+}
+
+.signup__radio-custom {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  position: relative;
+  transition: border-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+/* Selected state - purple filled circle */
+.signup__radio input[type="radio"]:checked + .signup__radio-custom {
+  border-color: var(--color-primary);
+}
+
+.signup__radio input[type="radio"]:checked + .signup__radio-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  animation: radioFill 0.2s ease-out;
+}
+
+.signup__radio-text {
+  color: var(--color-text-primary);
+  font-weight: 400;
+}
+
+/* Radio fill animation */
+@keyframes radioFill {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Page fade-in animation */
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

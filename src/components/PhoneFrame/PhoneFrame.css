@@ -1,0 +1,49 @@
+/* ============================================
+   PhoneFrame - Mobile device container
+   ============================================ */
+
+.phone-frame {
+  width: var(--phone-width);
+  height: var(--phone-height);
+  background-color: var(--color-bg-phone);
+  border-radius: 32px;
+  box-shadow: var(--shadow-phone);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--color-border-light);
+
+  /* Subtle entrance animation */
+  animation: frameSlideUp 0.5s ease-out;
+}
+
+.phone-frame__content {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Entrance animation */
+@keyframes frameSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive: smaller screens */
+@media (max-width: 480px) {
+  .phone-frame {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+  }
+}
