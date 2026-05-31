@@ -1,16 +1,54 @@
-# React + Vite
+# PopX - Mobile UI Recreation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A pixel-perfect recreation of the PopX mobile app design built with **React JS** and **Vite**.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Check out the live application here:
+**[https://popx-design-sham-27.web.app](https://popx-design-sham-27.web.app)**
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Pixel-Perfect Implementation**: Built to match design screenshots exactly.
+- **Mobile-First Design**: Centered phone frame for a modern preview experience.
+- **Reusable Components**: Clean and scalable folder structure with reusable `Button`, `FloatingInput`, and `PhoneFrame`.
+- **Smooth Navigation**: Implementation of React Router for seamless transitions between Landing, Login, Signup, and Profile pages.
+- **Modern Styling**: Custom CSS with design tokens for consistent colors, shadows, and typography.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Core**: React JS (Vite)
+- **Routing**: React Router Dom
+- **Styling**: Vanilla CSS (Custom Hooks & Variables)
+- **Deployment**: Firebase Hosting
+
+## 📂 Folder Structure
+
+```
+src/
+├── components/         # Reusable UI elements
+├── pages/              # Page-level components
+├── styles/             # Global CSS and Design Tokens
+└── App.jsx             # Main router configuration
+```
+
+## 🚀 Getting Started
+
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/ShamGanesh27/Adobe-design.git
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run local dev server**
+   ```bash
+   npm run dev
+   ```
+
+## 📋 License
+
+This project is open-source and available under the [MIT License](LICENSE).
